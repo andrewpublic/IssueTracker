@@ -2,41 +2,40 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <!-- Bootstrap core CSS 
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../../Content/dashboard.css" rel="stylesheet"> -->
+    
+    <!-- Insert ASP.NET Razor method of importing stylesheets, uses BundleConfig -->
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
+    @Html.Partial("_Navbar")
+    @Html.Partial("_Sidebar")
+<!-- <div class="container body-content"> -->
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="container-fluid">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - IssueTracker v0.2 by Andrew C</p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+</div>
 </body>
 </html>
