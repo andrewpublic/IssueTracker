@@ -1,0 +1,24 @@
+﻿<!-- Sidebar, responsive. Small/medium = 3 columns, medium = 2 columns -->
+<div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li>@Html.ActionLink("Report", "Contact", "Home")</li>
+            <li>@Html.ActionLink("Analytics", "Contact", "Home")</li>
+            <li>@Html.ActionLink("Export", "Contact", "Home")</li>
+        </ul>
+        <ul class="nav nav-sidebar">
+            <!-- <li><a href="">View Issues</a></li> -->
+            <li>@Html.ActionLink("View Issues", "Retrieve", "Issue")</li>
+            <li>@Html.ActionLink("Create New Issue", "Create", "Issue")</li>
+        </ul>
+        <ul class="nav nav-sidebar">
+            <li>@Html.ActionLink("View Sprints", "Retrieve", "Sprint")</li>
+            <li>@Html.ActionLink("Create New Sprint", "Create", "Sprint")</li>
+        </ul>
+        <ul class="nav nav-sidebar">
+            <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+        </ul>
+    </div>
+</div>

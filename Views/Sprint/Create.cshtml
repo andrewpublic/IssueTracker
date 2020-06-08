@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create Sprint<br />- Just scaffolding so far: rebuild into it's own design (to be designed).</h2>
+
+<form>
+    <div class="form-group">
+        <label form="quickIssue">Quick Sprint</label>
+        <textarea class="form-control" rows="4">Write a description here...</textarea><br />
+        <div class="form-group">
+            <label for="exampleInputFile">Attachments</label>
+            <input type="file" id="exampleInputFile">
+            <p class="help-block">Attach any files that help describe or assist with the issue.</p>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Notify me for updates.
+        </label>
+    </div>
+</form>
