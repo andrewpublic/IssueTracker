@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IssueTracker.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,8 +12,16 @@ namespace IssueTracker.Controllers
         // GET: Issue
         public ActionResult Retrieve()
         {
-            return View();
+            var context = new ProjectContext();
+            return View(context.Issues.ToList());
         }
+
+        //public ActionResult Retrieve()
+        //{
+        //    using (var context = new ProjectContext())
+        //    { var Issuelist = context.Issues.ToList(); }
+        //    return View();
+        //}
 
         public ActionResult Create()
         {

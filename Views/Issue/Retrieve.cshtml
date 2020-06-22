@@ -1,4 +1,5 @@
-﻿
+﻿<!-- Provides model namespace, uses bootstrap shared _Layout, populates table with model table data -->
+@model IEnumerable<IssueTracker.Models.Issue>
 @{
     ViewBag.Title = "Retrieve";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,11 +10,11 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>#</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
+                <th>@Html.DisplayNameFor(model => model.IssueId)</th>
+                <th>@Html.DisplayNameFor(model => model.UserId)</th>
+                <th>@Html.DisplayNameFor(model => model.SprintId)</th>
+                <th>@Html.DisplayNameFor(model => model.StartDate)</th>
+                <th>@Html.DisplayNameFor(model => model.CompletionDate)</th>
             </tr>
         </thead>
         <tbody>

@@ -143,3 +143,7 @@ C:\Users\YM\Documents\IssueTracker\v0.2\IssueTracker\obj\Debug\IssueTracker.cspr
 C:\Users\YM\Documents\IssueTracker\v0.2\IssueTracker\obj\Debug\IssueTracker.csproj.CopyComplete
 C:\Users\YM\Documents\IssueTracker\v0.2\IssueTracker\obj\Debug\IssueTracker.dll
 C:\Users\YM\Documents\IssueTracker\v0.2\IssueTracker\obj\Debug\IssueTracker.pdb
+C:\Users\YM\Documents\IssueTracker\v0.2\IssueTracker\bin\EntityFramework.dll
+C:\Users\YM\Documents\IssueTracker\v0.2\IssueTracker\bin\EntityFramework.SqlServer.dll
+C:\Users\YM\Documents\IssueTracker\v0.2\IssueTracker\bin\EntityFramework.xml
+C:\Users\YM\Documents\IssueTracker\v0.2\IssueTracker\bin\EntityFramework.SqlServer.xml
