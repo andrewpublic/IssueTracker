@@ -3,7 +3,7 @@
 This github project is being used alongside a Jira project board + sprints to complete the Issue Tracker project.
 A list of the intended sprints will be included at the bottom of this Readme.
 
-# Issue Tracker v0.1
+#Issue Tracker v0.1
 
 This project is being created using the MVC design pattern. The UI (view) will be created first and then a database will be instantiated through Google Firebase. The controller logic will be written to provide updated views using the data store which is handled by the model.
 
