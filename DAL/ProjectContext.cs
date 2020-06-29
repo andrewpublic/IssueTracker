@@ -13,9 +13,9 @@ namespace IssueTracker.DAL
         // public ProjectContext() calls parameterless class constructor by default // base("ProjectContext") is the database name
         // convention connections use SQL server express or LocalDB, to use anything else we must use connection string in web.config
         public ProjectContext() : base("IssueTrackerDB")
-        { }
+        { Database.SetInitializer<ProjectContext>(new DropCreateDatabaseIfModelChanges<ProjectContext>()); }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<UserEntity> Users { get; set; }
         public DbSet<Issue> Issues { get; set; }
         public DbSet<Sprint> Sprints { get; set; }
 

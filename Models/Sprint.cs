@@ -9,7 +9,7 @@ namespace IssueTracker.Models
     {
         public int SprintId { get; set; }
         public int IssueId { get; set; }
-        public int UserId { get; set; }
+        public int UserEntityId { get; set; }
         public string Name { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime CompletionDate { get; set; }

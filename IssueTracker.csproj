@@ -138,7 +138,7 @@
     </Compile>
     <Compile Include="Models\Issue.cs" />
     <Compile Include="Models\Sprint.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -490,8 +490,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Issue\Retrieve.cshtml" />
-    <Content Include="Views\Issue\Create.cshtml" />
+    <Content Include="Views\Issue\Index.cshtml" />
+    <Content Include="Views\Issue\CreateA.cshtml" />
     <Content Include="Views\Issue\Update.cshtml" />
     <Content Include="Views\Issue\Delete.cshtml" />
     <Content Include="Views\Sprint\Retrieve.cshtml" />
@@ -506,6 +506,10 @@
     <Content Include="Views\Data\Analytics.cshtml" />
     <Content Include="Views\Data\Export.cshtml" />
     <Content Include="Views\Nav\UserProfile.cshtml" />
+    <Content Include="Views\Issue\Create.cshtml" />
+    <Content Include="Views\Issue\Retrieve.cshtml" />
+    <Content Include="Views\Sprint\Index.cshtml" />
+    <Content Include="Views\Issue\DeleteA.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
