@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IssueTracker.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +9,20 @@ namespace IssueTracker.Controllers
 {
     public class SprintController : Controller
     {
+        public ActionResult Index()
+        {
+            var context = new ProjectContext();
+            return View(context.Sprints.ToList());
+        }
+
         // GET: Sprint
         public ActionResult Retrieve()
         {
-            return View();
+            var context = new ProjectContext();
+            return View(context.Sprints.ToList());
         }
+
+
 
         public ActionResult Create()
         {

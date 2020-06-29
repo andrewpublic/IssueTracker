@@ -1,88 +1,36 @@
-﻿<!-- Provides model namespace, uses bootstrap shared _Layout, populates table with model table data -->
-@model IEnumerable<IssueTracker.Models.Issue>
+﻿@model IEnumerable<IssueTracker.Models.Issue>
+
 @{
-    ViewBag.Title = "Retrieve";
+    ViewBag.Title = "Inspect Issue";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2 class="sub-header">Current Issues</h2>
-<div class="table-responsive">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>@Html.DisplayNameFor(model => model.IssueId)</th>
-                <th>@Html.DisplayNameFor(model => model.UserId)</th>
-                <th>@Html.DisplayNameFor(model => model.SprintId)</th>
-                <th>@Html.DisplayNameFor(model => model.StartDate)</th>
-                <th>@Html.DisplayNameFor(model => model.CompletionDate)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td>sit</td>
-            </tr>
-            <tr>
-                <td>1,002</td>
-                <td>amet</td>
-                <td>consectetur</td>
-                <td>adipiscing</td>
-                <td>elit</td>
-            </tr>
-            <tr>
-                <td>1,003</td>
-                <td>Integer</td>
-                <td>nec</td>
-                <td>odio</td>
-                <td>Praesent</td>
-            </tr>
-            <tr>
-                <td>1,004</td>
-                <td>libero</td>
-                <td>Sed</td>
-                <td>cursus</td>
-                <td>ante</td>
-            </tr>
-            <tr>
-                <td>1,005</td>
-                <td>dapibus</td>
-                <td>diam</td>
-                <td>Sed</td>
-                <td>nisi</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<h2 class="sub-header">Closed Issues</h2>
-<div class="table-responsive">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td>sit</td>
-            </tr>
-            <tr>
-                <td>1,002</td>
-                <td>amet</td>
-                <td>consectetur</td>
-                <td>adipiscing</td>
-                <td>elit</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.UserEntityId)</th>
+        <th>@Html.DisplayNameFor(model => model.SprintId)</th>
+        <th>@Html.DisplayNameFor(model => model.Name)</th>
+        <th>@Html.DisplayNameFor(model => model.StartDate)</th>
+        <th>@Html.DisplayNameFor(model => model.CompletionDate)</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.UserEntityId)</td>
+        <td>@Html.DisplayFor(modelItem => item.SprintId)</td>
+        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+        <td>@Html.DisplayFor(modelItem => item.StartDate)</td>
+        <td>@Html.DisplayFor(modelItem => item.CompletionDate)</td>
+        <td>
+            @Html.ActionLink("Edit", "Update", new { id=item.IssueId }) |
+            @Html.ActionLink("Details", "Retrieve", new { id=item.IssueId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IssueId })
+        </td>
+    </tr>
+}
+</table>
